@@ -23,14 +23,14 @@ async function getComments(page, selector){
     return comments
 }
 
-const browser = await puppeter.launch(  {headless: false} );
+const browser = await puppeter.launch( {headless: false} );
 const page = await browser.newPage();
 // Acessa a página do instagram.
 await page.goto("https://www.instagram.com", { waitUntil: "networkidle0" });
 await page.click(`input[type="text"]`); // Da um click falso no input de login
-await page.keyboard.type("", {delay:100}); // digita uma string no input
+await page.keyboard.type("dominio595", {delay:100}); // digita uma string no input
 await page.click('input[type="password"]'); //Da um click falso no input de sennha
-await page.keyboard.type("", {delay:100}); // digita uma string no input
+await page.keyboard.type("jdm12jdm", {delay:100}); // digita uma string no input
 await page.click(".L3NKy"); // Clica em um elemento HTML cujo a classe é ".L3NKy"
 await page.waitForNavigation();
 await page.goto("https://www.instagram.com/p/CaCuWmmsd77/", { waitUntil: "networkidle0" });
@@ -63,15 +63,15 @@ function count2(comments2){
     }, {})
     return counted2
 }
+//fazer o sorteio de um array
 console.log(count2(comments2));
 function sort(counted){
     const sorted = Object.entries(counted).sort((a, b) => b[1] - a[1])
     return sorted
 }
-const counted = count(comments)
-const sorted = sort(counted)
-const top5 = sorted.slice(0,1)
-console.log(top5)
+const numeros =(comments2);
+const numero = Math.floor(Math.random() * numeros.length);
+console.log("parabéns",numeros[numero]);
 await browser.close();
 }
 
