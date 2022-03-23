@@ -28,7 +28,7 @@ const page = await browser.newPage();
 // Acessa a página do instagram.
 await page.goto("https://www.instagram.com", { waitUntil: "networkidle0" });
 await page.click(`input[type="text"]`); // Da um click falso no input de login
-await page.keyboard.type("dominio595", {delay:100}); // digita uma string no input
+await page.keyboard.type("", {delay:100}); // digita uma string no input
 await page.click('input[type="password"]'); //Da um click falso no input de sennha
 await page.keyboard.type("", {delay:100}); // digita uma string no input
 await page.click(".L3NKy"); // Clica em um elemento HTML cujo a classe é ".L3NKy"
